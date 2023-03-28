@@ -1,0 +1,86 @@
+.hero {
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .herocontanier {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+    .left {
+      flex: 1;
+      position: relative;
+
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        h1 {
+          font-size: 70px;
+          margin: 10px 0;
+        }
+
+        h2 {
+          font-size: 35px;
+        }
+
+        h3 {
+          font-size: 30px;
+        }
+
+        span {
+          font-size: 30px;
+          color: #de5b0a;
+        }
+      }
+      .ityped-cursor {
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .right {
+      flex: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      position: relative;
+      color: #de5b0a;
+      img {
+        width: 50%;
+        object-fit: cover;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        animation: animate 2s infinite ease alternate;
+        @keyframes animate {
+          to {
+            transform: translateY(20px);
+          }
+        }
+      }
+    }
+  }
+}
